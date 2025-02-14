@@ -1,0 +1,16 @@
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\bin\Debug\net8.0-windows\TreeViewApp.exe
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\bin\Debug\net8.0-windows\TreeViewApp.deps.json
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\bin\Debug\net8.0-windows\TreeViewApp.runtimeconfig.json
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\bin\Debug\net8.0-windows\TreeViewApp.dll
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\bin\Debug\net8.0-windows\TreeViewApp.pdb
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.Form1.resources
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.csproj.GenerateResource.cache
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.AssemblyInfo.cs
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.dll
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\refint\TreeViewApp.dll
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.pdb
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.genruntimeconfig.cache
+C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\ref\TreeViewApp.dll
