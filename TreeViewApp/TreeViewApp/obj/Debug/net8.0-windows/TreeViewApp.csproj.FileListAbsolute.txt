@@ -14,3 +14,20 @@ C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows
 C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.pdb
 C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.genruntimeconfig.cache
 C:\Users\user\Desktop\INTR-Test\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\ref\TreeViewApp.dll
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\bin\Debug\net8.0-windows\TreeViewApp.exe
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\bin\Debug\net8.0-windows\TreeViewApp.deps.json
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\bin\Debug\net8.0-windows\TreeViewApp.runtimeconfig.json
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\bin\Debug\net8.0-windows\TreeViewApp.dll
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\bin\Debug\net8.0-windows\TreeViewApp.pdb
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.Form1.resources
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.csproj.GenerateResource.cache
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.AssemblyInfoInputs.cache
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.AssemblyInfo.cs
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.csproj.CoreCompileInputs.cache
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.sourcelink.json
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.dll
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\refint\TreeViewApp.dll
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.pdb
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\TreeViewApp.genruntimeconfig.cache
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\TreeViewApp\TreeViewApp\obj\Debug\net8.0-windows\ref\TreeViewApp.dll

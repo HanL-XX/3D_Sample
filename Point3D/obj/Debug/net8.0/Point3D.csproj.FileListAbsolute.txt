@@ -12,3 +12,18 @@ C:\Users\user\Desktop\INTR-Test\Point3D\obj\Debug\net8.0\refint\Point3D.dll
 C:\Users\user\Desktop\INTR-Test\Point3D\obj\Debug\net8.0\Point3D.pdb
 C:\Users\user\Desktop\INTR-Test\Point3D\obj\Debug\net8.0\Point3D.genruntimeconfig.cache
 C:\Users\user\Desktop\INTR-Test\Point3D\obj\Debug\net8.0\ref\Point3D.dll
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\bin\Debug\net8.0\Point3D.exe
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\bin\Debug\net8.0\Point3D.deps.json
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\bin\Debug\net8.0\Point3D.runtimeconfig.json
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\bin\Debug\net8.0\Point3D.dll
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\bin\Debug\net8.0\Point3D.pdb
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\obj\Debug\net8.0\Point3D.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\obj\Debug\net8.0\Point3D.AssemblyInfoInputs.cache
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\obj\Debug\net8.0\Point3D.AssemblyInfo.cs
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\obj\Debug\net8.0\Point3D.csproj.CoreCompileInputs.cache
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\obj\Debug\net8.0\Point3D.sourcelink.json
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\obj\Debug\net8.0\Point3D.dll
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\obj\Debug\net8.0\refint\Point3D.dll
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\obj\Debug\net8.0\Point3D.pdb
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\obj\Debug\net8.0\Point3D.genruntimeconfig.cache
+C:\Users\hanha\OneDrive\Máy tính\INT_Test\3D_Sample\Point3D\obj\Debug\net8.0\ref\Point3D.dll

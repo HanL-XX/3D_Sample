@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeViewApp", "TreeViewApp\TreeViewApp.csproj", "{9B2503E6-CD25-4403-A31D-C4D107644673}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeViewApp", "TreeViewApp\TreeViewApp.csproj", "{9B2503E6-CD25-4403-A31D-C4D107644673}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Point3D", "..\Point3D\Point3D.csproj", "{928A1D2C-CD6F-4389-8DC1-6F9A799BB5A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Point3D", "..\Point3D\Point3D.csproj", "{928A1D2C-CD6F-4389-8DC1-6F9A799BB5A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenGL_WPF_Viewer", "..\OpenGL_WPF_Viewer\OpenGL_WPF_Viewer.csproj", "{B29276F7-2035-4180-A79C-82FB7E03B9C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenGL_Viewer", "..\OpenGL_Viewer\OpenGL_Viewer.csproj", "{35FCDA4B-F7C4-43A4-B440-D1AD1A743A37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +25,19 @@ Global
 		{928A1D2C-CD6F-4389-8DC1-6F9A799BB5A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{928A1D2C-CD6F-4389-8DC1-6F9A799BB5A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{928A1D2C-CD6F-4389-8DC1-6F9A799BB5A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B29276F7-2035-4180-A79C-82FB7E03B9C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B29276F7-2035-4180-A79C-82FB7E03B9C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B29276F7-2035-4180-A79C-82FB7E03B9C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B29276F7-2035-4180-A79C-82FB7E03B9C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35FCDA4B-F7C4-43A4-B440-D1AD1A743A37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35FCDA4B-F7C4-43A4-B440-D1AD1A743A37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35FCDA4B-F7C4-43A4-B440-D1AD1A743A37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35FCDA4B-F7C4-43A4-B440-D1AD1A743A37}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C818AC80-4BA1-41C5-B1AF-723C597E4D2F}
 	EndGlobalSection
 EndGlobal

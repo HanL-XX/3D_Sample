@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
@@ -18,12 +19,6 @@ namespace OpenGL_Viewer.Models
             Model3D part2 = new Model3D();
             Model3D part3 = new Model3D();
             Model3D part4 = new Model3D();
-
-            // Tạo danh sách chứa các đỉnh mới của từng phần
-            List<Vector3> newVertices1 = new List<Vector3>();
-            List<Vector3> newVertices2 = new List<Vector3>();
-            List<Vector3> newVertices3 = new List<Vector3>();
-            List<Vector3> newVertices4 = new List<Vector3>();
 
             // Duyệt qua các face
             foreach (var face in model.Faces)
@@ -45,7 +40,7 @@ namespace OpenGL_Viewer.Models
                 {
                     List<int> newFaceIndices = new List<int>();
                     int region = GetFaceRegion(face, model, xm, ym);
-
+                        
                     foreach (var vertexIndex in splitFace.Vertices)
                     {
                         Vector3 vertex = model.Vertices[vertexIndex];
@@ -153,7 +148,11 @@ namespace OpenGL_Viewer.Models
                     isCut = true;
                 }
             }
-
+            if(intersectionPoints.Count == 4)
+            {
+                Debug.WriteLine("There");
+            }
+                
             // Nếu không bị cắt, trả về mặt nguyên bản
             if (!isCut)
             {
@@ -179,7 +178,7 @@ namespace OpenGL_Viewer.Models
 
                 if (Math.Abs(f_p0) < 1e-6 && Math.Abs(f_p1) < 1e-6)
                 {
-                    // Đoạn thẳng nằm trên mặt phẳng (cần xử lý riêng nếu muốn)
+                    // Đoạn thẳng nằm trên mặt phẳng
                     return null;
                 }
 
@@ -349,67 +348,7 @@ namespace OpenGL_Viewer.Models
         public static int AddVertexToModel(Model3D model, Vector3 vertex)
         {
             model.Vertices.Add(vertex);
-            return model.Vertices.Count;
-        }
-
-        private static void AddFaceToSubModel(Face face, Model3D originalModel, Model3D subModel, Dictionary<Vector3, int> vertexMap)
-        {
-            Face newFace = new Face();
-            foreach (var vertexIndex in face.Vertices)
-            {
-                Vector3 vertex = originalModel.Vertices[vertexIndex];
-
-                if (!vertexMap.ContainsKey(vertex))
-                {
-                    vertexMap[vertex] = subModel.Vertices.Count;
-                    subModel.Vertices.Add(vertex);
-                }
-
-                newFace.Vertices.Add(vertexMap[vertex]);
-            }
-            subModel.Faces.Add(newFace);
-        }
-
-        private static List<Face> SplitFace(List<Vector3> faceVertices, Vector3 center, List<Model3D> subModels, List<Dictionary<Vector3, int>> vertexMaps)
-        {
-            List<Face> newFaces = new List<Face>();
-            Dictionary<Vector3, int> newVertexMap = new Dictionary<Vector3, int>();
-
-            for (int i = 0; i < faceVertices.Count; i++)
-            {
-                Vector3 v1 = faceVertices[i];
-                Vector3 v2 = faceVertices[(i + 1) % faceVertices.Count];
-
-                if ((v1.X > center.X) != (v2.X > center.X) || (v1.Y > center.Y) != (v2.Y > center.Y))
-                {
-                    Vector3 midPoint = (v1 + v2) / 2;
-                    if (!newVertexMap.ContainsKey(midPoint))
-                    {
-                        newVertexMap[midPoint] = subModels[0].Vertices.Count;
-                        subModels[0].Vertices.Add(midPoint);
-                    }
-                }
-            }
-
-            foreach (var kvp in newVertexMap)
-            {
-                for (int i = 0; i < 4; i++)
-                {
-                    if (!vertexMaps[i].ContainsKey(kvp.Key))
-                    {
-                        vertexMaps[i][kvp.Key] = subModels[i].Vertices.Count;
-                        subModels[i].Vertices.Add(kvp.Key);
-                    }
-                }
-            }
-
-            for (int i = 0; i < faceVertices.Count - 2; i++)
-            {
-                Face newFace = new Face { Vertices = new List<int> { i, i + 1, i + 2 } };
-                newFaces.Add(newFace);
-            }
-
-            return newFaces;
+            return model.Vertices.Count - 1;
         }
     }
 }

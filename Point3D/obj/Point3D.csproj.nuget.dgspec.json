@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\Desktop\\INTR-Test\\Point3D\\Point3D.csproj": {}
+    "C:\\Users\\hanha\\OneDrive\\Máy tính\\INT_Test\\3D_Sample\\Point3D\\Point3D.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\Desktop\\INTR-Test\\Point3D\\Point3D.csproj": {
+    "C:\\Users\\hanha\\OneDrive\\Máy tính\\INT_Test\\3D_Sample\\Point3D\\Point3D.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\Desktop\\INTR-Test\\Point3D\\Point3D.csproj",
+        "projectUniqueName": "C:\\Users\\hanha\\OneDrive\\Máy tính\\INT_Test\\3D_Sample\\Point3D\\Point3D.csproj",
         "projectName": "Point3D",
-        "projectPath": "C:\\Users\\user\\Desktop\\INTR-Test\\Point3D\\Point3D.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\Desktop\\INTR-Test\\Point3D\\obj\\",
+        "projectPath": "C:\\Users\\hanha\\OneDrive\\Máy tính\\INT_Test\\3D_Sample\\Point3D\\Point3D.csproj",
+        "packagesPath": "C:\\Users\\hanha\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\hanha\\OneDrive\\Máy tính\\INT_Test\\3D_Sample\\Point3D\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hanha\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,8 +44,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -66,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
