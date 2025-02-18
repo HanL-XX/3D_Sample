@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
 
@@ -27,10 +28,6 @@ namespace OpenGL_Viewer.Models
                 List<int> newFace2 = new List<int>();
                 List<int> newFace3 = new List<int>();
                 List<int> newFace4 = new List<int>();
-                if (model.Faces.IndexOf(face) == 0)
-                {
-                    var a = face;
-                }
                     
                 //Kiểm tra xem face có bị cắt không và chia mặt nếu cần thiết
                 var splitFaces = SplitFaceIfNeeded(model, face, xm, ym);
@@ -39,8 +36,8 @@ namespace OpenGL_Viewer.Models
                 foreach (var splitFace in splitFaces)
                 {
                     List<int> newFaceIndices = new List<int>();
-                    int region = GetFaceRegion(face, model, xm, ym);
-                        
+                    int region = GetFaceRegion(splitFace, model, xm, ym);
+
                     foreach (var vertexIndex in splitFace.Vertices)
                     {
                         Vector3 vertex = model.Vertices[vertexIndex];
@@ -91,7 +88,7 @@ namespace OpenGL_Viewer.Models
 
         static int GetFaceRegion(Face face, Model3D model, float xm, float ym)
         {
-            HashSet<int> regions = new HashSet<int>();
+            List<int> regions = new List<int>();
 
             foreach (var index in face.Vertices)
             {
@@ -99,6 +96,7 @@ namespace OpenGL_Viewer.Models
                 regions.Add(GetRegion(vertex, xm, ym));
             }
 
+            
             return regions.Sum() != -3 ? regions.Max(): -1;
         }
 
@@ -148,10 +146,6 @@ namespace OpenGL_Viewer.Models
                     isCut = true;
                 }
             }
-            if(intersectionPoints.Count == 4)
-            {
-                Debug.WriteLine("There");
-            }
                 
             // Nếu không bị cắt, trả về mặt nguyên bản
             if (!isCut)
@@ -160,7 +154,7 @@ namespace OpenGL_Viewer.Models
             }
 
             // Nếu có cắt, chia tam giác thành các phần nhỏ hơn
-            return SplitFaceIntoSubfaces(model, face, intersectionPoints);
+            return SplitFaceIntoSubfaces(model, face, intersectionPoints.Distinct().ToList());
             //return new List<Face>();
         }
 
@@ -221,7 +215,23 @@ namespace OpenGL_Viewer.Models
         // Hàm tạo các mặt con từ các đỉnh và điểm giao cắt
         public static List<Face> CreateFacesFromVertices(List<Vector3> originalVertices, List<Vector3> intersectionPoints, Model3D model)
         {
+            if (intersectionPoints.Count > 4)
+            {
+                var a = intersectionPoints;
+            }
+            else if (intersectionPoints.Count == 4)
+            {
+                var a = intersectionPoints;
+
+            }
+            else if (intersectionPoints.Count != 2)
+            {
+                var a = intersectionPoints;
+
+            }
+
             List<Face> newFaces = new List<Face>();
+
             float xm = (model.Vertices.Min(v => v.X) + model.Vertices.Max(v => v.X)) / 2;
             float ym = (model.Vertices.Min(v => v.Y) + model.Vertices.Max(v => v.Y)) / 2;
 
@@ -229,46 +239,110 @@ namespace OpenGL_Viewer.Models
             List<Vector3> allVertices = new List<Vector3>(originalVertices);
             allVertices.AddRange(intersectionPoints);
 
-            //Vector3? intersectionZ = GetIntersectionPoint(p0, p1, 1, 0, 0, -xm); // Mặt phẳng x = xm
+            // Nếu có đúng 4 điểm giao
+            if (intersectionPoints.Count == 4)
+            {
+                // Chia thành hai nhóm: Hai điểm có cùng X và hai điểm có cùng Y
+                List<Vector3> xAligned = intersectionPoints.Where(p => Math.Abs(p.X - xm) < 1e-6).ToList();
+                List<Vector3> yAligned = intersectionPoints.Where(p => Math.Abs(p.Y - ym) < 1e-6).ToList();
 
+                if (xAligned.Count > 2)
+                {
+                    xAligned = intersectionPoints.Where(p => Math.Abs(p.X - xm) < 1e-6 && Math.Abs(p.Y - ym) >= 1e-6).ToList();
+                }
+                if (yAligned.Count > 2)
+                {
+                    yAligned = intersectionPoints.Where(p => Math.Abs(p.Y - ym) < 1e-6 && Math.Abs(p.X - xm) >= 1e-6).ToList();
+                }
 
-            List<Vector3> region1 = new List<Vector3>();  
-            List<Vector3> region2 = new List<Vector3>();  
-            List<Vector3> region3 = new List<Vector3>(); 
+                if (xAligned.Count == 2 && yAligned.Count == 2)
+                { 
+                    // Tìm giao điểm của hai đường thẳng
+                    Vector3? intersection = GetSegmentIntersection(xAligned[0], xAligned[1], yAligned[0], yAligned[1]);
+
+                    if (intersection.HasValue)
+                    {
+                        allVertices.Add((Vector3)intersection);
+                    }
+                }
+            }
+
+            allVertices = allVertices.Distinct().ToList();
+
+            List<Vector3> region1 = new List<Vector3>();
+            List<Vector3> region2 = new List<Vector3>();
+            List<Vector3> region3 = new List<Vector3>();
             List<Vector3> region4 = new List<Vector3>();
 
             foreach (var point in allVertices)
             {
                 List<int> region = GetRegionSplit(point, xm, ym);
 
-                if(region.Contains(1))
-                {
-                    region1.Add(point);
-                }
-                if (region.Contains(2))
-                {
-                    region2.Add(point);
-                }
-                if (region.Contains(3))
-                {
-                    region3.Add(point);
-                }
-                if (region.Contains(4))
-                {
-                    region4.Add(point);
-                }
+                if (region.Contains(1)) region1.Add(point);
+                if (region.Contains(2)) region2.Add(point);
+                if (region.Contains(3)) region3.Add(point);
+                if (region.Contains(4)) region4.Add(point);
             }
 
-            if(region1.Count > 2)
-                newFaces.AddRange(CreateFacesFromRegion(region1, model));
-            if (region2.Count > 2)
-                newFaces.AddRange(CreateFacesFromRegion(region2, model));
-            if (region3.Count > 2)
-                newFaces.AddRange(CreateFacesFromRegion(region3, model));
-            if (region4.Count > 2)
-                newFaces.AddRange(CreateFacesFromRegion(region4, model));
+            if (region1.Count > 2) newFaces.AddRange(CreateFacesFromRegion(region1, model));
+            if (region2.Count > 2) newFaces.AddRange(CreateFacesFromRegion(region2, model));
+            if (region3.Count > 2) newFaces.AddRange(CreateFacesFromRegion(region3, model));
+            if (region4.Count > 2) newFaces.AddRange(CreateFacesFromRegion(region4, model));
 
             return newFaces;
+        }
+
+        public static Vector3? GetSegmentIntersection(Vector3 p1, Vector3 p2, Vector3 q1, Vector3 q2)
+        {
+            // Hệ số của hai đường thẳng
+            float A1 = p2.Y - p1.Y;
+            float B1 = p1.X - p2.X;
+            float C1 = A1 * p1.X + B1 * p1.Y;
+
+            float A2 = q2.Y - q1.Y;
+            float B2 = q1.X - q2.X;
+            float C2 = A2 * q1.X + B2 * q1.Y;
+
+            // Tính định thức
+            float det = A1 * B2 - A2 * B1;
+
+            if (Math.Abs(det) < 1e-6)
+            {
+                return null; // Hai đoạn thẳng song song hoặc trùng nhau
+            }
+
+            // Tọa độ giao điểm trên mặt phẳng XY
+            float x = (B2 * C1 - B1 * C2) / det;
+            float y = (A1 * C2 - A2 * C1) / det;
+
+            // Kiểm tra giao điểm có nằm trong đoạn thẳng P1P2 không
+            float minXP = Math.Min(p1.X, p2.X), maxXP = Math.Max(p1.X, p2.X);
+            float minYP = Math.Min(p1.Y, p2.Y), maxYP = Math.Max(p1.Y, p2.Y);
+
+            if (x < minXP || x > maxXP || y < minYP || y > maxYP)
+            {
+                return null; // Giao điểm nằm ngoài đoạn thẳng P1P2
+            }
+
+            // Kiểm tra giao điểm có nằm trong đoạn thẳng Q1Q2 không
+            float minXQ = Math.Min(q1.X, q2.X), maxXQ = Math.Max(q1.X, q2.X);
+            float minYQ = Math.Min(q1.Y, q2.Y), maxYQ = Math.Max(q1.Y, q2.Y);
+
+            if (x < minXQ || x > maxXQ || y < minYQ || y > maxYQ)
+            {
+                return null; // Giao điểm nằm ngoài đoạn thẳng Q1Q2
+            }
+
+            // Nội suy tọa độ Z
+            float t = (Math.Abs(p2.X - p1.X) > 1e-6) ? (x - p1.X) / (p2.X - p1.X) : (y - p1.Y) / (p2.Y - p1.Y);
+            float s = (Math.Abs(q2.X - q1.X) > 1e-6) ? (x - q1.X) / (q2.X - q1.X) : (y - q1.Y) / (q2.Y - q1.Y);
+
+            float z1 = p1.Z + t * (p2.Z - p1.Z);
+            float z2 = q1.Z + s * (q2.Z - q1.Z);
+
+            float z = (z1 + z2) / 2; // Lấy trung bình Z từ hai đoạn thẳng
+
+            return new Vector3(x, y, z);
         }
 
         public static List<Face> CreateFacesFromRegion(List<Vector3> regionPoints, Model3D model)
@@ -290,14 +364,15 @@ namespace OpenGL_Viewer.Models
 
         public static List<Vector3> GetConvexHull(List<Vector3> points)
         {
-            points = points.OrderBy(p => p.X).ThenBy(p => p.Y).ToList();
+            if (points.Count < 3) return new List<Vector3>(); // Trả về rỗng nếu ít hơn 3 điểm
 
-            List<Vector3> lower = new List<Vector3>();
-            List<Vector3> upper = new List<Vector3>();
+            points = points.Distinct().OrderBy(p => p.X).ThenBy(p => p.Y).ToList(); // Loại bỏ điểm trùng
+
+            List<Vector3> lower = new List<Vector3>(), upper = new List<Vector3>();
 
             foreach (var p in points)
             {
-                while (lower.Count >= 2 && Cross(lower[lower.Count - 2], lower[lower.Count - 1], p) <= 0)
+                while (lower.Count >= 2 && Cross(lower[^2], lower[^1], p) <= 0)
                     lower.RemoveAt(lower.Count - 1);
                 lower.Add(p);
             }
@@ -305,14 +380,15 @@ namespace OpenGL_Viewer.Models
             for (int i = points.Count - 1; i >= 0; i--)
             {
                 Vector3 p = points[i];
-                while (upper.Count >= 2 && Cross(upper[upper.Count - 2], upper[upper.Count - 1], p) <= 0)
+                while (upper.Count >= 2 && Cross(upper[^2], upper[^1], p) <= 0)
                     upper.RemoveAt(upper.Count - 1);
                 upper.Add(p);
             }
 
-            lower.RemoveAt(lower.Count - 1);
-            upper.RemoveAt(upper.Count - 1);
+            if (lower.Count > 1) lower.RemoveAt(lower.Count - 1);
+            if (upper.Count > 1) upper.RemoveAt(upper.Count - 1);
             lower.AddRange(upper);
+
             return lower;
         }
 
@@ -320,23 +396,74 @@ namespace OpenGL_Viewer.Models
         {
             List<Face> faces = new List<Face>();
 
-            if (polygon.Count < 3)
-                return faces;
+            if (polygon.Count < 3) return faces;
 
-            for (int i = 1; i < polygon.Count - 1; i++)
+            // Nếu chỉ có 3 điểm, thêm trực tiếp một tam giác
+            if (polygon.Count == 3)
             {
                 faces.Add(new Face()
                 {
                     Vertices = new List<int>
             {
                 AddVertexToModel(model, polygon[0]),
-                AddVertexToModel(model, polygon[i]),
-                AddVertexToModel(model, polygon[i + 1])
+                AddVertexToModel(model, polygon[1]),
+                AddVertexToModel(model, polygon[2])
             }
                 });
+                return faces;
             }
+
+            // Kiểm tra nếu đa giác bị lõm
+            if (!IsConvexPolygon(polygon))
+            {
+                throw new InvalidOperationException("Không thể chia đa giác lõm bằng thuật toán này.");
+            }
+
+            for (int i = 1; i < polygon.Count - 1; i++)
+            {
+                if (polygon[i] != polygon[i + 1]) // Bỏ qua điểm trùng
+                {
+                    faces.Add(new Face()
+                    {
+                        Vertices = new List<int>
+                {
+                    AddVertexToModel(model, polygon[0]),
+                    AddVertexToModel(model, polygon[i]),
+                    AddVertexToModel(model, polygon[i + 1])
+                }
+                    });
+                }
+            }
+
             return faces;
         }
+
+        public static bool IsConvexPolygon(List<Vector3> polygon)
+        {
+            if (polygon.Count < 3) return false; // Không đủ điểm để tạo thành một đa giác
+
+            bool hasPositive = false;
+            bool hasNegative = false;
+
+            int n = polygon.Count;
+            for (int i = 0; i < n; i++)
+            {
+                Vector3 p0 = polygon[i];
+                Vector3 p1 = polygon[(i + 1) % n];
+                Vector3 p2 = polygon[(i + 2) % n];
+
+                float crossProduct = Cross(p0, p1, p2);
+
+                if (crossProduct > 0) hasPositive = true;
+                if (crossProduct < 0) hasNegative = true;
+
+                // Nếu có cả dấu dương và âm → Đa giác bị lõm
+                if (hasPositive && hasNegative) return false;
+            }
+
+            return true;
+        }
+
 
         private static float Cross(Vector3 O, Vector3 A, Vector3 B)
         {
