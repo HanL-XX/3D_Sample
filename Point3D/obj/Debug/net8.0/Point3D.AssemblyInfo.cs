@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Point3D")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1ad808ba943a9dd34c14150809e9137f7e542b45")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6749b5cb8d49e0406ab3e8ce2f58ca0ac13fe407")]
 [assembly: System.Reflection.AssemblyProductAttribute("Point3D")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Point3D")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

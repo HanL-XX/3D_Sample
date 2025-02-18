@@ -1,10 +1,50 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\user\\Desktop\\INTR-Test\\OpenGL_Viewer\\",
+  "WorkspaceRootPath": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|c:\\users\\user\\desktop\\intr-test\\opengl_viewer\\models\\modelsplitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|c:\\users\\hanha\\onedrive\\m\u00E1y t\u00EDnh\\int_test\\3d_sample\\opengl_viewer\\forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|solutionrelative:forms\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|c:\\users\\hanha\\onedrive\\m\u00E1y t\u00EDnh\\int_test\\3d_sample\\opengl_viewer\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|solutionrelative:forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|c:\\users\\hanha\\onedrive\\m\u00E1y t\u00EDnh\\int_test\\3d_sample\\opengl_viewer\\shaders\\vertex_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|solutionrelative:shaders\\vertex_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|c:\\users\\hanha\\onedrive\\m\u00E1y t\u00EDnh\\int_test\\3d_sample\\opengl_viewer\\shaders\\fragment_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|solutionrelative:shaders\\fragment_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|c:\\users\\hanha\\onedrive\\m\u00E1y t\u00EDnh\\int_test\\3d_sample\\opengl_viewer\\opengl\\glcontrolform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|solutionrelative:opengl\\glcontrolform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|c:\\users\\hanha\\onedrive\\m\u00E1y t\u00EDnh\\int_test\\3d_sample\\opengl_viewer\\opengl\\glcontrolform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|solutionrelative:opengl\\glcontrolform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|c:\\users\\hanha\\onedrive\\m\u00E1y t\u00EDnh\\int_test\\3d_sample\\opengl_viewer\\models\\shader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|solutionrelative:models\\shader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|c:\\users\\hanha\\onedrive\\m\u00E1y t\u00EDnh\\int_test\\3d_sample\\opengl_viewer\\models\\objwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|solutionrelative:models\\objwriter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|c:\\users\\hanha\\onedrive\\m\u00E1y t\u00EDnh\\int_test\\3d_sample\\opengl_viewer\\models\\objloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|solutionrelative:models\\objloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|c:\\users\\hanha\\onedrive\\m\u00E1y t\u00EDnh\\int_test\\3d_sample\\opengl_viewer\\models\\modelsplitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|solutionrelative:models\\modelsplitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|c:\\users\\hanha\\onedrive\\m\u00E1y t\u00EDnh\\int_test\\3d_sample\\opengl_viewer\\models\\model3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C4E8DC78-EF64-4AE0-84AF-F92593C33D4E}|OpenGL_Viewer.csproj|solutionrelative:models\\model3d.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,160 +54,148 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 35,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:137:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:151:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:149:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:148:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:147:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:138:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:139:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:136:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:149:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:150:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:147:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:148:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:146:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:143:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:142:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:140:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:141:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:142:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:147:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:143:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:145:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:143:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:146:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:142:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ModelSplitter.cs",
-              "DocumentMoniker": "C:\\Users\\user\\Desktop\\INTR-Test\\OpenGL_Viewer\\Models\\ModelSplitter.cs",
-              "RelativeDocumentMoniker": "Models\\ModelSplitter.cs",
-              "ToolTip": "C:\\Users\\user\\Desktop\\INTR-Test\\OpenGL_Viewer\\Models\\ModelSplitter.cs",
-              "RelativeToolTip": "Models\\ModelSplitter.cs",
-              "ViewState": "AgIAAOwAAAAAAAAAAAAmwAYBAAAuAAAAAAAAAA==",
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Forms\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "Forms\\MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Forms\\MainForm.Designer.cs",
+              "RelativeToolTip": "Forms\\MainForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-18T02:23:02.89Z",
+              "WhenOpened": "2025-02-18T15:47:26.508Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "Forms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Forms\\MainForm.cs",
+              "RelativeToolTip": "Forms\\MainForm.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T15:47:17.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "vertex_shader.glsl",
+              "DocumentMoniker": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Shaders\\vertex_shader.glsl",
+              "RelativeDocumentMoniker": "Shaders\\vertex_shader.glsl",
+              "ToolTip": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Shaders\\vertex_shader.glsl",
+              "RelativeToolTip": "Shaders\\vertex_shader.glsl",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-18T15:47:12.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "fragment_shader.glsl",
+              "DocumentMoniker": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Shaders\\fragment_shader.glsl",
+              "RelativeDocumentMoniker": "Shaders\\fragment_shader.glsl",
+              "ToolTip": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Shaders\\fragment_shader.glsl",
+              "RelativeToolTip": "Shaders\\fragment_shader.glsl",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-18T15:47:10.191Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GLControlForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\OpenGL\\GLControlForm.Designer.cs",
+              "RelativeDocumentMoniker": "OpenGL\\GLControlForm.Designer.cs",
+              "ToolTip": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\OpenGL\\GLControlForm.Designer.cs",
+              "RelativeToolTip": "OpenGL\\GLControlForm.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T15:46:58.9Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GLControlForm.cs",
+              "DocumentMoniker": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\OpenGL\\GLControlForm.cs",
+              "RelativeDocumentMoniker": "OpenGL\\GLControlForm.cs",
+              "ToolTip": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\OpenGL\\GLControlForm.cs",
+              "RelativeToolTip": "OpenGL\\GLControlForm.cs",
+              "ViewState": "AgIAAIoAAAAAAAAAAAAowKcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T15:46:38.561Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Shader.cs",
+              "DocumentMoniker": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Models\\Shader.cs",
+              "RelativeDocumentMoniker": "Models\\Shader.cs",
+              "ToolTip": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Models\\Shader.cs",
+              "RelativeToolTip": "Models\\Shader.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T15:46:12.653Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ObjWriter.cs",
+              "DocumentMoniker": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Models\\ObjWriter.cs",
+              "RelativeDocumentMoniker": "Models\\ObjWriter.cs",
+              "ToolTip": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Models\\ObjWriter.cs",
+              "RelativeToolTip": "Models\\ObjWriter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T15:46:07.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ObjLoader.cs",
+              "DocumentMoniker": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Models\\ObjLoader.cs",
+              "RelativeDocumentMoniker": "Models\\ObjLoader.cs",
+              "ToolTip": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Models\\ObjLoader.cs",
+              "RelativeToolTip": "Models\\ObjLoader.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T15:46:02.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Model3D.cs",
+              "DocumentMoniker": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Models\\Model3D.cs",
+              "RelativeDocumentMoniker": "Models\\Model3D.cs",
+              "ToolTip": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Models\\Model3D.cs",
+              "RelativeToolTip": "Models\\Model3D.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T15:45:38.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ModelSplitter.cs",
+              "DocumentMoniker": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Models\\ModelSplitter.cs",
+              "RelativeDocumentMoniker": "Models\\ModelSplitter.cs",
+              "ToolTip": "C:\\Users\\hanha\\OneDrive\\M\u00E1y t\u00EDnh\\INT_Test\\3D_Sample\\OpenGL_Viewer\\Models\\ModelSplitter.cs",
+              "RelativeToolTip": "Models\\ModelSplitter.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwBUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-18T02:23:02.89Z"
             }
           ]
         }

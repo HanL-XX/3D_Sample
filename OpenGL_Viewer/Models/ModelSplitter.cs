@@ -37,7 +37,7 @@ namespace OpenGL_Viewer.Models
                 {
                     List<int> newFaceIndices = new List<int>();
                     int region = GetFaceRegion(splitFace, model, xm, ym);
-
+  
                     foreach (var vertexIndex in splitFace.Vertices)
                     {
                         Vector3 vertex = model.Vertices[vertexIndex];
@@ -88,16 +88,28 @@ namespace OpenGL_Viewer.Models
 
         static int GetFaceRegion(Face face, Model3D model, float xm, float ym)
         {
-            List<int> regions = new List<int>();
+            // Tính trọng tâm của face
+            Vector3 centroid = GetCentroid(face, model);
+
+            // Xác định vùng của trọng tâm
+            return GetRegion(centroid, xm, ym);
+        }
+
+        // Hàm tính trọng tâm của Face
+        static Vector3 GetCentroid(Face face, Model3D model)
+        {
+            float sumX = 0, sumY = 0, sumZ = 0;
+            int count = face.Vertices.Count;
 
             foreach (var index in face.Vertices)
             {
                 Vector3 vertex = model.Vertices[index];
-                regions.Add(GetRegion(vertex, xm, ym));
+                sumX += vertex.X;
+                sumY += vertex.Y;
+                sumZ += vertex.Z;
             }
 
-            
-            return regions.Sum() != -3 ? regions.Max(): -1;
+            return new Vector3(sumX / count, sumY / count, sumZ / count);
         }
 
         static int GetRegion(Vector3 vertex, float xm, float ym)
@@ -215,21 +227,6 @@ namespace OpenGL_Viewer.Models
         // Hàm tạo các mặt con từ các đỉnh và điểm giao cắt
         public static List<Face> CreateFacesFromVertices(List<Vector3> originalVertices, List<Vector3> intersectionPoints, Model3D model)
         {
-            if (intersectionPoints.Count > 4)
-            {
-                var a = intersectionPoints;
-            }
-            else if (intersectionPoints.Count == 4)
-            {
-                var a = intersectionPoints;
-
-            }
-            else if (intersectionPoints.Count != 2)
-            {
-                var a = intersectionPoints;
-
-            }
-
             List<Face> newFaces = new List<Face>();
 
             float xm = (model.Vertices.Min(v => v.X) + model.Vertices.Max(v => v.X)) / 2;
@@ -294,7 +291,6 @@ namespace OpenGL_Viewer.Models
 
         public static Vector3? GetSegmentIntersection(Vector3 p1, Vector3 p2, Vector3 q1, Vector3 q2)
         {
-            // Hệ số của hai đường thẳng
             float A1 = p2.Y - p1.Y;
             float B1 = p1.X - p2.X;
             float C1 = A1 * p1.X + B1 * p1.Y;
@@ -303,7 +299,6 @@ namespace OpenGL_Viewer.Models
             float B2 = q1.X - q2.X;
             float C2 = A2 * q1.X + B2 * q1.Y;
 
-            // Tính định thức
             float det = A1 * B2 - A2 * B1;
 
             if (Math.Abs(det) < 1e-6)
@@ -311,36 +306,28 @@ namespace OpenGL_Viewer.Models
                 return null; // Hai đoạn thẳng song song hoặc trùng nhau
             }
 
-            // Tọa độ giao điểm trên mặt phẳng XY
             float x = (B2 * C1 - B1 * C2) / det;
             float y = (A1 * C2 - A2 * C1) / det;
 
-            // Kiểm tra giao điểm có nằm trong đoạn thẳng P1P2 không
             float minXP = Math.Min(p1.X, p2.X), maxXP = Math.Max(p1.X, p2.X);
             float minYP = Math.Min(p1.Y, p2.Y), maxYP = Math.Max(p1.Y, p2.Y);
-
-            if (x < minXP || x > maxXP || y < minYP || y > maxYP)
-            {
-                return null; // Giao điểm nằm ngoài đoạn thẳng P1P2
-            }
-
-            // Kiểm tra giao điểm có nằm trong đoạn thẳng Q1Q2 không
             float minXQ = Math.Min(q1.X, q2.X), maxXQ = Math.Max(q1.X, q2.X);
             float minYQ = Math.Min(q1.Y, q2.Y), maxYQ = Math.Max(q1.Y, q2.Y);
 
-            if (x < minXQ || x > maxXQ || y < minYQ || y > maxYQ)
+            bool withinSegmentP = (Math.Abs(p2.X - p1.X) > 1e-6) ? (x >= minXP && x <= maxXP) : (y >= minYP && y <= maxYP);
+            bool withinSegmentQ = (Math.Abs(q2.X - q1.X) > 1e-6) ? (x >= minXQ && x <= maxXQ) : (y >= minYQ && y <= maxYQ);
+
+            if (!withinSegmentP || !withinSegmentQ)
             {
-                return null; // Giao điểm nằm ngoài đoạn thẳng Q1Q2
+                return null; // Giao điểm nằm ngoài đoạn thẳng
             }
 
-            // Nội suy tọa độ Z
-            float t = (Math.Abs(p2.X - p1.X) > 1e-6) ? (x - p1.X) / (p2.X - p1.X) : (y - p1.Y) / (p2.Y - p1.Y);
-            float s = (Math.Abs(q2.X - q1.X) > 1e-6) ? (x - q1.X) / (q2.X - q1.X) : (y - q1.Y) / (q2.Y - q1.Y);
+            float t = (Math.Abs(p2.X - p1.X) > Math.Abs(p2.Y - p1.Y)) ? (x - p1.X) / (p2.X - p1.X) : (y - p1.Y) / (p2.Y - p1.Y);
+            float s = (Math.Abs(q2.X - q1.X) > Math.Abs(q2.Y - q1.Y)) ? (x - q1.X) / (q2.X - q1.X) : (y - q1.Y) / (q2.Y - q1.Y);
 
             float z1 = p1.Z + t * (p2.Z - p1.Z);
             float z2 = q1.Z + s * (q2.Z - q1.Z);
-
-            float z = (z1 + z2) / 2; // Lấy trung bình Z từ hai đoạn thẳng
+            float z = (z1 + z2) / 2;
 
             return new Vector3(x, y, z);
         }

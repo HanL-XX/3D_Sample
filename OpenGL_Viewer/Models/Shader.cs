@@ -57,14 +57,6 @@ namespace OpenGL_Viewer.OpenGL
                 GL.UniformMatrix4(location, false, ref matrix);
             }
         }
-        public void SetVector3(string name, Vector3 value)
-        {
-            int location = GL.GetUniformLocation(Handle, name);
-            if (location != -1)
-            {
-                GL.Uniform3(location, value);
-            }
-        }
 
         private void CheckShaderCompileError(int shader, string type)
         {

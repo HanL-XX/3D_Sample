@@ -34,7 +34,7 @@
             groupBoxTreeView = new GroupBox();
 
             // 
-            // panelTop (chứa nút Load XML)
+            // panelTop
             // 
             panelTop.Dock = DockStyle.Top;
             panelTop.Height = 60;
